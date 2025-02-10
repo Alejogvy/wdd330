@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 330 - Web Frontend Development II - Alejandro Villamar">
+    <meta name="author" content="Alejandro Villamar">
+    <title>Bee Fit</title>
+    <link rel="stylesheet" href="styles/beefit.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="scripts/beefit.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>BEE FIT</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="exercises.html" id="exercises">Exercises</a></li>
+                <li><a href="supplements.html" id="supplements">Supplements</a></li>
+                <li><a href="healthy.html" id="feeding">Healthy</a></li>
+                <li><a href="contact.html" id="contact">Contact Us</a></li>
+            </ul>
+            <button id="hamburger" aria-label="Toggle menu">&#9776;</button>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>A Bee Fit Always Near You</h2>
+            <p>Feel the energy of Bee Fit</p>
+            <figure>
+                <img src="images/beefit.webp" alt="Bee Fit" class="full-width-img">
+            </figure>
+        </section>
+
+        <section class="locations">
+            <h2>Find the Nearest Location to You</h2>
+            <label for="locations">Check your locations:</label>
+            <select id="locations" name="locations" multiple>
+                <option value="quito">Quito</option>
+                <option value="guayaquil">Guayaquil</option>
+                <option value="cuenca">Cuenca</option>
+                <option value="ambato">Ambato</option>
+                <option value="manabi">Manabí</option>
+                <option value="santo-domingo">Santo Domingo</option>
+            </select>
+        </section>
+
+        <section class="plans">
+            <h2>Choose Your Plan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>PLAN Black - $21.99</th>
+                        <th>PLAN Smart - $29.99</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Free weight area, integrated weight, cardio, and group classes</td>
+                        <td>&#10003;</td>
+                        <td>&#10003;</td>
+                    </tr>
+                    <tr>
+                        <td>Access to all gym areas</td>
+                        <td>&#10003;</td>
+                        <td>&#10003;</td>
+                    </tr>
+                    <tr>
+                        <td>Access to other Bee Fit locations worldwide</td>
+                        <td>&#10003;</td>
+                        <td>&#10007;</td>
+                    </tr>
+                    <tr>
+                        <td>No cancellation fee</td>
+                        <td>&#10007;</td>
+                        <td>&#10007;</td>
+                    </tr>
+                    <tr>
+                        <td>Bee Fit App</td>
+                        <td>&#10003;</td>
+                        <td>&#10003;</td>
+                    </tr>
+                    <tr>
+                        <td>Bee Fit Go</td>
+                        <td>&#10003;</td>
+                        <td>&#10007;</td>
+                    </tr>
+                    <tr>
+                        <td>Invite a friend to train</td>
+                        <td>&#10003;</td>
+                        <td>&#10007;</td>
+                    </tr>
+                    <tr>
+                        <td>Massage chairs</td>
+                        <td>&#10003;</td>
+                        <td>&#10007;</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="location.href='contact.html'">Sign Up Now!</button>
+        </section>
+
+        <section class="needs">
+            <h2>Everything You Need</h2>
+            <div class="features">
+                <div class="feature">
+                    <img src="images/cardio.webp" alt="Top-level equipment">
+                    <p>Top-level Equipment</p>
+                </div>
+                <div class="feature">
+                    <img src="images/aulas.webp" alt="Group Class Rooms">
+                    <p>Group Class Rooms</p>
+                </div>
+                <div class="feature">
+                    <img src="images/cardio.webp" alt="Integrated Weight">
+                    <p>Integrated Weight</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="classes">
+            <h2>Discover Our Bee Fit Group Classes</h2>
+            <div class="class">
+                <h3>BEE RUMBA</h3>
+                <img src="images/bee-rumba.webp" alt="Bee Rumba" class="full-width-img">
+                <p>Integrated Weight</p>
+                <p>Duration: 50-60 min</p>
+                <p>Intensity: High</p>
+                <p>Bee Fit's rumba classes are ideal for energetic people.</p>
+            </div>
+            <div class="class">
+                <h3>BEE SHAPE</h3>
+                <img src="images/bee-shape.webp" alt="Bee Shape" class="full-width-img">
+                <p>Integrated Weight</p>
+                <p>Duration: 50-60 min</p>
+                <p>Intensity: High</p>
+                <p>Our exclusive circuit training at Bee Fit combines over 30 minutes of aerobic and anaerobic exercises.</p>
+            </div>
+            <div class="class">
+                <h3>BEE COMBAT</h3>
+                <img src="images/bee-combat.webp" alt="Bee Combat" class="full-width-img">
+                <p>Integrated Weight</p>
+                <p>Duration: 50-60 min</p>
+                <p>Intensity: High</p>
+                <p>Training that combines boxing and martial arts techniques.</p>
+            </div>
+            <button onclick="location.href='contact.html'">Sign Up Now!</button>
+        </section>
+
+        <section class="app">
+            <h2>Bee Fit App: A Complete Training Experience</h2>
+            <p>Whether you have experience or are just starting, download the Bee Fit app to optimize your training routine.</p>
+            <div class="download-links">
+                <a href="#"><img src="images/play_store.webp" alt="Google Play"> </a>
+                <a href="#"><img src="images/app_store.webp" alt="App Store"></a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Alejandro Villamar | Quito - Ecuador</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

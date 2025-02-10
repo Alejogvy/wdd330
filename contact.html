@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign Up for Healthy Eating Guide">
+    <meta name="author" content="Alejandro Villamar">
+    <title>Sign Up - Healthy Eating Guide</title>
+    <link rel="stylesheet" href="styles/healthy.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="scripts/healthy.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Sign Up - Healthy Eating Guide</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="exercises.html" id="exercises">Exercises</a></li>
+                <li><a href="supplements.html" id="supplements">Supplements</a></li>
+                <li><a href="healthy.html" id="feeding">Healthy</a></li>
+                <li><a href="contact.html" id="contact">Contact Us</a></li>
+            </ul>
+            <button id="hamburger" aria-label="Toggle menu">&#9776;</button>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <h2>A Bee Fit Always Near You</h2>
+            <p>Feel the energy of Bee Fit</p>
+            <figure>
+                <img src="images/beefit.webp" alt="Bee Fit" class="full-width-img">
+            </figure>
+        </section>
+        <section id="signup-form" class="section-content">
+            <h2>Sign Up for Our Plans</h2>
+            <form action="signup-form-handler.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+                
+                <label for="plan">Choose Your Plan:</label>
+                <select id="plan" name="plan" required>
+                    <option value="black">PLAN Black</option>
+                    <option value="smart">PLAN Smart</option>
+                </select>
+                
+                <label for="message">Additional Information:</label>
+                <textarea id="message" name="message"></textarea>
+                
+                <button type="submit">Sign Up Now!</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Alejandro Villamar | Quito - Ecuador</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

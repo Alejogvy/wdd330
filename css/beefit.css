@@ -1,0 +1,198 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.hero {
+  background-color: #ffcc00;
+  text-align: center;
+  padding: 10px 10px;
+  color: #000000;
+}
+
+.hero img {
+  flex: content;
+  max-width: 10%;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+.hero p {
+  font-size: 1.2em;
+}
+
+.locations {
+  padding: 20px;
+  text-align: center;
+}
+
+.locations h2 {
+  font-size: 2em;
+}
+
+.locations input {
+  padding: 10px;
+  width: 80%;
+  max-width: 500px;
+  margin-top: 10px;
+  font-size: 1em;
+}
+
+.plans {
+  padding: 20px;
+  text-align: center;
+}
+
+.plans h2 {
+  font-size: 2em;
+}
+
+.plans table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.plans th, .plans td {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.plans th {
+  background-color: #ffcc00;
+}
+
+.plans td:nth-child(2) {
+  background-color: #ffcc00;
+}
+
+.plans button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #ffcc00;
+  border: none;
+  cursor: pointer;
+}
+
+.needs {
+  padding: 20px;
+  text-align: center;
+}
+
+.needs h2 {
+  font-size: 2em;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.feature {
+  width: 30%;
+  min-width: 200px;
+  text-align: center;
+}
+
+.feature img {
+  display: flex;
+  justify-content:center;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.classes {
+  padding: 20px;
+  text-align: center;
+}
+
+.classes h2 {
+  font-size: 2em;
+}
+
+.class {
+  margin-bottom: 20px;
+}
+
+.classes button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #ffcc00;
+  border: none;
+  cursor: pointer;
+}
+
+.app {
+  padding: 20px;
+  text-align: center;
+}
+
+.app h2 {
+  font-size: 2em;
+}
+
+.download-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+footer p {
+  margin: 5px 0;
+}
