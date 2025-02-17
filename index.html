@@ -6,11 +6,12 @@
     <meta name="description" content="WDD 330 - Web Frontend Development II - Alejandro Villamar">
     <meta name="author" content="Alejandro Villamar">
     <title>Bee Fit</title>
-    <link rel="stylesheet" href="styles/beefit.css">
+    <link rel="stylesheet" href="css/beefit.css">
+    <link rel="stylesheet" href="css/general.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <script src="scripts/beefit.js" defer></script>
+    <script src="js/beefit.js" defer></script>
 </head>
 <body>
     <header>
@@ -21,6 +22,7 @@
                 <li><a href="exercises.html" id="exercises">Exercises</a></li>
                 <li><a href="supplements.html" id="supplements">Supplements</a></li>
                 <li><a href="healthy.html" id="feeding">Healthy</a></li>
+                <li><a href="weather.html">Weather</a></li>
                 <li><a href="contact.html" id="contact">Contact Us</a></li>
             </ul>
             <button id="hamburger" aria-label="Toggle menu">&#9776;</button>
@@ -151,7 +153,7 @@
             <button onclick="location.href='contact.html'">Sign Up Now!</button>
         </section>
 
-        <section class="app">
+        <section class="climate">
             <h2>Bee Fit App: A Complete Training Experience</h2>
             <p>Whether you have experience or are just starting, download the Bee Fit app to optimize your training routine.</p>
             <div class="download-links">
@@ -160,9 +162,12 @@
             </div>
         </section>
     </main>
+    <div class="content"></div>
+    <div class="empty_space"></div>
     <footer>
-        <p>&copy; <span id="currentyear"></span> Alejandro Villamar | Quito - Ecuador</p>
-        <p id="lastModified"></p>
+        <p>Contact us: info@bee-fit.com | +593 99-678-6909</p>
+        <p>&copy; <span id="year"></span> Alejandro Villamar | Quito - Ecuador</p> <span id="lastModified"></span></p>
     </footer>
+    <script src="js/climate.js" defer></script>
 </body>
 </html>
