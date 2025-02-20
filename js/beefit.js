@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Actualización del año actual y última fecha de modificación
+    // Current year update and last modification date
     const currentYear = new Date().getFullYear();
     document.getElementById('currentyear').textContent = currentYear;
     
     const lastModified = document.lastModified;
     document.getElementById('lastModified').textContent = `Last modified: ${lastModified}`;
 
-    // Funcionalidad del menú de navegación
+    // Navigation menu functionality
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.querySelector('nav ul');
 
