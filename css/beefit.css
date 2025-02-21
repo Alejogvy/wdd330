@@ -30,11 +30,12 @@ header h1 {
 nav {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
+  list-style-type: none;
   gap: 20px;
 }
 
@@ -48,6 +49,7 @@ nav a {
   font-size: 1.1em;
 }
 
+/* Menu responsive */
 nav button {
   background: none;
   border: none;
@@ -57,13 +59,9 @@ nav button {
   display: none;
 }
 
+
 /* Menú responsive */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   nav ul {
     display: none;
     flex-direction: column;
@@ -258,3 +256,4 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+

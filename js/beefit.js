@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hamburger Menu Functionality
     const hamburger = document.getElementById('hamburger');
-    const navlinks = document.getElementById('navlinks'); // Ensure the ID matches the HTML
+    const navlinks = document.querySelector('nav ul'); // Use querySelector to select the 'ul' inside 'nav'
 
     if (hamburger && navlinks) {
         hamburger.addEventListener('click', () => {
@@ -14,6 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log("Clases actuales del menú:", navlinks.classList);
         });
     } else {
-        console.error("Error: No se encontraron elementos #hamburger o #navlinks");
+        console.error("Error: No se encontraron elementos #hamburger o el <ul> dentro de <nav>");
     }
 });
