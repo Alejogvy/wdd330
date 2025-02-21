@@ -16,40 +16,81 @@
     <title>Registered Users</title>
 </head>
 <body>
-    <h1>Registered Users</h1>
-    <ul id="userList"></ul>
-    
-    <nav>
-        <a href="index.html" id="home">Home</a>
-        <a href="exercises.html" id="exercises">Exercises</a>
-        <a href="supplements.html" id="supplements">Supplements</a>
-        <a href="healthy.html" id="feeding">Healthy</a>
-        <a href="weather.html">Weather</a>
-        <a href="contact.html" id="contact">Contact Us</a>
-    </nav>
+    <header>
+        <h1>Registered Users</h1>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="exercises.html" id="exercises">Exercises</a></li>
+                <li><a href="supplements.html" id="supplements">Supplements</a></li>
+                <li><a href="healthy.html" id="feeding">Healthy</a></li>
+                <li><a href="weather.html">Weather</a></li>
+                <li><a href="contact.html" id="contact">Contact Us</a></li>
+            </ul>
+            <button id="hamburger" aria-label="Toggle menu">&#9776;</button>
+        </nav>
+    </header>
 
-    <!-- back link -->
-    <a href="index.html">Back to Registration</a>
+    <main>
+        <section id="user-section">
+            <h2>List of Registered Users</h2>
+            <ul id="userList"></ul>
+            <p id="no-users" style="display: none;">No users registered yet.</p>
+            <button onclick="clearAllUsers()">Delete All Users</button>
+            <button onclick="history.back()">Go Back</button>
+        </section>
+    </main>
 
-    <script>
-        // Retrieve users from localStorage and display them
-        const users = JSON.parse(localStorage.getItem('users')) || [];
-        const userList = document.getElementById('userList');
-
-        if (users.length > 0) {
-            users.forEach(user => {
-                const li = document.createElement('li');
-                li.textContent = `Name: ${user.name}, Email: ${user.email}, Membership: ${user.membership}`;
-                userList.appendChild(li);
-            });
-        } else {
-            userList.textContent = 'No users registered yet.';
-        }
-    </script>
     <footer>
         <p>Contact us: info@bee-fit.com | +593 99-678-6909</p>
-        <p>&copy; <span id="year"></span> Alejandro Villamar | Quito - Ecuador</p> <span id="lastModified"></span></p>
+        <p>&copy; <span id="year"></span> Alejandro Villamar | Quito - Ecuador</p> 
+        <p id="lastModified"></p>
     </footer>
+
     <script src="js/climate.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadUsers();
+
+            
+            document.getElementById('year').textContent = new Date().getFullYear();
+            document.getElementById('lastModified').textContent = "Last modified: " + document.lastModified;
+        });
+
+        function loadUsers() {
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+            const userList = document.getElementById('userList');
+            const noUsersMessage = document.getElementById('no-users');
+
+            userList.innerHTML = "";
+            if (users.length > 0) {
+                noUsersMessage.style.display = "none";
+                users.forEach((user, index) => {
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                        <span>Name: ${user.name}, Email: ${user.email}, Membership: ${user.membership}</span>
+                        <button onclick="deleteUser(${index})">❌ Delete</button>
+                    `;
+                    userList.appendChild(li);
+                });
+            } else {
+                noUsersMessage.style.display = "block";
+            }
+        }
+
+        function deleteUser(index) {
+            let users = JSON.parse(localStorage.getItem('users')) || [];
+            users.splice(index, 1);
+            localStorage.setItem('users', JSON.stringify(users));
+            loadUsers();
+        }
+
+        function clearAllUsers() {
+            if (confirm("Are you sure you want to delete all users?")) {
+                localStorage.removeItem('users');
+                loadUsers();
+            }
+        }
+    </script>
 </body>
 </html>
