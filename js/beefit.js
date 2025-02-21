@@ -1,16 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Current year update and last modification date
-    const currentYear = new Date().getFullYear();
-    document.getElementById('currentyear').textContent = currentYear;
-    
-    const lastModified = document.lastModified;
-    document.getElementById('lastModified').textContent = `Last modified: ${lastModified}`;
+    // Update current year and last modified date
+    document.getElementById('currentyear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = `Última modificación: ${document.lastModified}`;
 
-    // Navigation menu functionality
+    // Hamburger Menu Functionality
     const hamburger = document.getElementById('hamburger');
-    const navLinks = document.querySelector('nav ul');
+    const navlinks = document.getElementById('navlinks'); // Ensure the ID matches the HTML
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
-    });
+    if (hamburger && navlinks) {
+        hamburger.addEventListener('click', () => {
+            console.log("Botón de hamburguesa clickeado");
+            navlinks.classList.toggle('show');
+            console.log("Clases actuales del menú:", navlinks.classList);
+        });
+    } else {
+        console.error("Error: No se encontraron elementos #hamburger o #navlinks");
+    }
 });
